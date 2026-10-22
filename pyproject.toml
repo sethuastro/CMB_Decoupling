@@ -9,7 +9,7 @@ description = "Hydrogen recombination (Saha, Peebles) and CMB photon decoupling,
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
-authors = [{ name = "Sethulekshmi" }]
+authors = [{ name = "Sethulekshmi Beena" }]
 dependencies = ["numpy>=1.24", "scipy>=1.11", "astropy>=5.3", "matplotlib>=3.7"]
 
 [project.optional-dependencies]
