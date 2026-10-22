@@ -152,7 +152,7 @@ The full list is at the end of [`docs/theory.md`](docs/theory.md#9-references).
 
 ## About me
 
-I'm Sethulekshmi, an MSc Astrophysics student at the University of Hertfordshire.
+I'm Sethulekshmi Beena, an MSc Astrophysics student at the University of Hertfordshire.
 ORCID [0009-0004-4767-2733](https://orcid.org/0009-0004-4767-2733) ·
 [homepage](https://sethulekshmibeena.github.io/my-webpage/)
 
