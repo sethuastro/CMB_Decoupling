@@ -125,7 +125,7 @@ def saha_species(z: float, cosmo: Cosmology) -> dict[str, float]:
         logs = np.array([0.0, log_a, log_a + np.log(r_HeII) - np.log(x_e)])
         w = np.exp(logs - logs.max())
         w /= w.sum()
-        return x_HII, float(w[1]), float(w[2])
+        return float(x_HII), float(w[1]), float(w[2])
 
     def residual(log_x: float) -> float:
         x_e = np.exp(log_x)
