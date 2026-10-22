@@ -67,6 +67,8 @@ def save(fig: Figure, outdir: Path, name: str) -> list[Path]:
     outdir.mkdir(parents=True, exist_ok=True)
     paths = [outdir / f"{name}.{ext}" for ext in ("pdf", "png")]
     for p in paths:
-        fig.savefig(p)
+        # No creation timestamp, so regenerated PDFs are byte-identical.
+        metadata = {"CreationDate": None} if p.suffix == ".pdf" else None
+        fig.savefig(p, metadata=metadata)
     plt.close(fig)
     return paths
