@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "CMB Decoupling: hydrogen recombination and photon last scattering"
+type: software
+authors:
+  - given-names: Sethulekshmi
+    affiliation: "University of Hertfordshire"
+    orcid: "https://orcid.org/0009-0004-4767-2733"
+    website: "https://sethulekshmibeena.github.io/my-webpage/"
+repository-code: "https://github.com/sethuastro/CMB_Decoupling_Project_"
+license: MIT
+version: 0.1.0
+date-released: 2026-10-22
+keywords:
+  - cosmology
+  - cosmic microwave background
+  - recombination
+  - Peebles model
+  - visibility function

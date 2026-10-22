@@ -1,0 +1,11 @@
+# Exact versions with which the tests and figures in this repository were produced.
+# Minimum supported versions are listed in pyproject.toml.
+numpy==2.5.4
+scipy==1.18.1
+astropy==8.0.2
+matplotlib==3.11.2
+camb==2.0.5
+pytest==9.1.1
+ruff==0.17.1
+nbconvert==7.17.2
+ipykernel==7.4.0
