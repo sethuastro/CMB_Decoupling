@@ -5,8 +5,9 @@ and states each approximation at the point where it is made. Numbers quoted in t
 were computed with this package for the Planck 2018 cosmology (Section 1); they are
 reproduced by `scripts/make_figures.py` and the notebook.
 
-Items marked **TODO: verify** are references whose exact location (equation, section or
-table number) still needs to be checked against the original source.
+Where an equation or value is taken from a paper, the equation or table number is given and
+has been checked against the original. Textbooks are cited for standard material without
+equation numbers.
 
 **Contents**
 
@@ -29,7 +30,8 @@ table number) still needs to be checked against the original source.
 $\Omega_b h^2 = 0.02237$, $\Omega_c h^2 = 0.1200$. The CMB temperature is
 $T_0 = 2.7255$ K (Fixsen 2009), the effective number of neutrino species is
 $N_{\rm eff} = 3.046$ (Mangano et al. 2005), and the primordial helium mass fraction is
-$Y_p = 0.2454$ (BBN-consistent value; **TODO: verify** its location in Planck 2018 VI).
+$Y_p = 0.2454$. This is the BBN-predicted value Planck uses for all columns of its Table 2
+("posterior mean $Y_P \approx 0.2454$", Table 2 caption; computed with PArthENoPE, Sect. 2.1).
 
 **Approximation 1.1: massless neutrinos.** Planck's baseline has one massive neutrino,
 $\sum m_\nu = 0.06$ eV, which is why it quotes $\Omega_m = 0.3153$. Here all neutrinos are
@@ -44,8 +46,8 @@ $\rho_{\rm crit} = 3H_0^2/(8\pi G)$:
 $$\Omega_\gamma = \frac{4\sigma_{\rm SB} T_0^4/c^3}{3H_0^2/(8\pi G)}, \qquad \Omega_\gamma h^2 = 2.47\times 10^{-5}.$$
 
 Each neutrino species has $7/8$ of the photon energy density per degree of freedom, at a
-temperature lower by $(4/11)^{1/3}$ because of $e^\pm$ annihilation (Dodelson & Schmidt 2020, Ch. 2;
-**TODO: verify** section). Therefore
+temperature lower by $(4/11)^{1/3}$ because of $e^\pm$ annihilation (Kolb & Turner 1990;
+Dodelson & Schmidt 2020). Therefore
 
 $$\Omega_r = \Omega_\gamma\left[1 + \frac{7}{8}\left(\frac{4}{11}\right)^{4/3} N_{\rm eff}\right] = 9.22\times 10^{-5}.$$
 
@@ -82,7 +84,7 @@ down to $z \sim 200$; below that the gas cools faster ($T_{\rm m} \propto (1+z)^
 For a non-relativistic species $i$ (mass $m_i$, internal degeneracy $g_i$, chemical potential
 $\mu_i$) in kinetic equilibrium at temperature $T$, integrating the Maxwell–Boltzmann
 distribution $f = e^{-(E - \mu)/k_BT}$ with $E = m_ic^2 + p^2/2m_i$ over momentum gives
-(Kolb & Turner 1990; Dodelson & Schmidt 2020, Ch. 3, **TODO: verify** equation number):
+(Kolb & Turner 1990; Dodelson & Schmidt 2020):
 
 $$n_i = g_i \int \frac{d^3p}{(2\pi\hbar)^3}\, e^{-(m_ic^2 - \mu_i)/k_BT}\, e^{-p^2/2m_ik_BT}
 = g_i\left(\frac{m_i k_B T}{2\pi\hbar^2}\right)^{3/2} e^{(\mu_i - m_ic^2)/k_BT}.$$
@@ -117,7 +119,7 @@ $n_p = x_e n_{\rm H}$ and $n_{\rm H\,I} = (1 - x_e)\,n_{\rm H}$. Substituting:
 
 $$\boxed{\;\frac{x_e^2}{1 - x_e} = \frac{1}{n_{\rm H}}\left(\frac{m_e k_B T}{2\pi\hbar^2}\right)^{3/2} e^{-E_{\rm ion}/k_BT} \equiv S(z)\;}$$
 
-This is Dodelson & Schmidt (2020), Ch. 4 (**TODO: verify** equation number). The ionisation
+This is the standard Saha equation for hydrogen recombination (e.g. Dodelson & Schmidt 2020). The ionisation
 energy is the reduced-mass-corrected Rydberg energy,
 $E_{\rm ion} = R_\infty hc\, m_p/(m_e + m_p) = 13.598$ eV, from CODATA 2018 constants.
 
@@ -146,7 +148,7 @@ $z = 1369.0$, where $T = 3734$ K and $k_BT = 0.322$ eV, far below 13.6 eV.
 ### 2.5 Helium in Saha equilibrium
 
 The same argument applied to ${\rm He\,I} \leftrightarrow {\rm He\,II} + e^-$ and
-${\rm He\,II} \leftrightarrow {\rm He\,III} + e^-$ gives (Seager, Sasselov & Scott 2000; **TODO: verify** equation numbers):
+${\rm He\,II} \leftrightarrow {\rm He\,III} + e^-$ gives (Seager, Sasselov & Scott 2000, eqs. 80–81):
 
 $$\frac{n_{\rm He\,II}\, n_e}{n_{\rm He\,I}} = 4\left(\frac{m_ek_BT}{2\pi\hbar^2}\right)^{3/2} e^{-\chi_{\rm He\,I}/k_BT},
 \qquad
@@ -155,6 +157,8 @@ $$\frac{n_{\rm He\,II}\, n_e}{n_{\rm He\,I}} = 4\left(\frac{m_ek_BT}{2\pi\hbar^2
 The prefactors are $g_e g_{\rm upper}/g_{\rm lower}$: $2\cdot 2/1 = 4$ (He I ground state $^1S_0$
 has $g = 1$; He II 1s has $g = 2$), and $2 \cdot 1/2 = 1$ (bare He III has $g = 1$). The ionisation
 energies are $\chi_{\rm He\,I} = 24.587$ eV and $\chi_{\rm He\,II} = 54.418$ eV (NIST Atomic Spectra Database).
+Seager et al. (2000) approximate $m_{\rm He}/m_{\rm H} = 4$ in $f_{\rm He} = Y_p/[4(1 - Y_p)]$. Here the
+exact atomic-mass ratio is used, which changes $f_{\rm He}$ by 0.7%.
 
 Each species fraction is then a function of $x_e$ alone, and charge neutrality
 
@@ -210,8 +214,8 @@ It is conventional (Seager et al. 1999) to work with
 $\beta_B = \alpha_B\left(m_ek_BT/2\pi\hbar^2\right)^{3/2} e^{-E_{\rm ion}/4k_BT}$, which is what the code computes.
 
 **(b) Two-photon decay 2s → 1s.** The 2s → 1s transition is forbidden for a single photon. It
-proceeds by two-photon emission at rate $\Lambda_{2s1s} = 8.22458\ {\rm s^{-1}}$ (value used in RECFAST,
-Seager et al. 1999; from Goldman 1989, **TODO: verify**). Including the inverse process
+proceeds by two-photon emission at rate $\Lambda_{2s1s} = 8.22458\ {\rm s^{-1}}$ (Goldman 1989, as quoted by
+Seager et al. 1999). Including the inverse process
 (two-photon absorption from 1s), with $g_{2s} = g_{1s}$, the net downward rate is
 
 $$\Lambda_{2s1s}\left(n_{2s} - n_{1s}\,e^{-E_{{\rm Ly}\alpha}/k_BT}\right),\qquad E_{{\rm Ly}\alpha} = \tfrac34 E_{\rm ion}.$$
@@ -278,7 +282,9 @@ Converting to redshift with $dt = -dz/[(1+z)H]$:
 
 $$\boxed{\;\frac{dx_e}{dz} = \frac{C_r}{(1+z)H(z)}\left[\alpha_B\, n_{\rm H}\, x_e^2 - \beta_B\,(1 - x_e)\, e^{-E_{{\rm Ly}\alpha}/k_BT}\right]\;}$$
 
-This is the form in Seager et al. (1999) and Dodelson & Schmidt (2020), Ch. 4 (**TODO: verify** equation numbers).
+This is eq. (1) of Seager et al. (1999) with $x_e = x_p$. There the Peebles factor is written as
+$(1 + K\Lambda_{2s1s}n_{1s})/[1 + K(\Lambda_{2s1s} + \beta_B)n_{1s}]$ with $K = \lambda_\alpha^3/(8\pi H)$;
+dividing numerator and denominator by $Kn_{1s}$ gives the form of $C_r$ above, since $1/(Kn_{1s}) = \Lambda_\alpha$.
 
 **Detailed-balance check.** Using $E_{\rm ion}/4 + E_{{\rm Ly}\alpha} = E_{\rm ion}$:
 
@@ -291,12 +297,13 @@ directly, to avoid multiplying a large and a small exponential (`tests/test_peeb
 
 ### 4.5 The recombination coefficient
 
-The case-B coefficient uses the fit of Péquignot, Petitjean & Boisson (1991), as adopted in RECFAST
-(Seager et al. 1999; **TODO: verify** coefficients against the paper):
+The case-B coefficient uses the fit of Péquignot, Petitjean & Boisson (1991) to the rates of
+Hummer (1994), as adopted in RECFAST (Seager et al. 1999, eq. 3):
 
 $$\alpha_B(T) = F \times 10^{-19}\,\frac{a\,t^b}{1 + c\,t^d}\ {\rm m^3\,s^{-1}},\qquad t = \frac{T}{10^4\ {\rm K}},$$
 
-with $a = 4.309$, $b = -0.6166$, $c = 0.6703$ and $d = 0.5300$. As a check, $\alpha_B(10^4\ {\rm K}) = 2.58\times 10^{-19}\ {\rm m^3\,s^{-1}}$,
+with $a = 4.309$, $b = -0.6166$, $c = 0.6703$ and $d = 0.5300$ (identical in the RECFAST module
+distributed with CAMB). As a check, $\alpha_B(10^4\ {\rm K}) = 2.58\times 10^{-19}\ {\rm m^3\,s^{-1}}$,
 consistent with the standard case-B value $2.59\times 10^{-13}\ {\rm cm^3\,s^{-1}}$
 (Osterbrock & Ferland 2006).
 
@@ -342,8 +349,7 @@ electrons, with cross-section $\sigma_T = \frac{8\pi}{3}\left(\frac{e^2}{4\pi\va
 $$\Gamma_T = n_e\,\sigma_T\, c = x_e\, n_{\rm H}\,\sigma_T\, c.$$
 
 Photons are tightly coupled while $\Gamma_T \gg H$, meaning many scatterings per Hubble time.
-**Decoupling** is commonly defined by $\Gamma_T(z_{\rm dec}) = H(z_{\rm dec})$ (Dodelson & Schmidt 2020,
-Ch. 4; **TODO: verify**).
+**Decoupling** is commonly defined by $\Gamma_T(z_{\rm dec}) = H(z_{\rm dec})$ (e.g. Dodelson & Schmidt 2020).
 
 | Model | $z_{\rm dec}$ ($\Gamma_T = H$) |
 |---|---|
@@ -398,6 +404,11 @@ Three common definitions give slightly different numbers for the same $x_e(z)$:
 | $z_*$: $\tau(z_*) = 1$ (Planck's definition) | 1089.44 | 1089.89 |
 | Peak of $g(z)$ per unit redshift | 1078.80 | 1078.37 |
 | Peak of the visibility per unit conformal time | 1089.11 | 1088.78 |
+
+For context, Planck's own fit gives $z_* = 1089.92 \pm 0.25$ for this data combination
+(Planck 2018 VI, Table 2). That number is not a like-for-like comparison: it includes a massive
+neutrino and a recombination history that incorporates the corrections computed by CosmoRec and
+HyRec (Planck 2018 VI, Sect. 7.7). The matched CAMB run above is the clean test of this code.
 
 The last row needs one more step. Conformal time obeys $d\eta = c\,dt/a = -c\,dz/H$, so the
 visibility per unit conformal time is
@@ -461,11 +472,13 @@ therefore isolate the recombination physics.
 * Chluba, J. & Thomas, R. M. 2011, *MNRAS* **412**, 748 — CosmoRec.
 * Dodelson, S. & Schmidt, F. 2020, *Modern Cosmology*, 2nd ed. (Academic Press).
 * Fixsen, D. J. 2009, *ApJ* **707**, 916 — $T_0 = 2.7255$ K.
-* Goldman, S. P. 1989, *Phys. Rev. A* **40**, 1185 — two-photon decay rate (**TODO: verify**).
+* Goldman, S. P. 1989, *Phys. Rev. A* **40**, 1185 — two-photon decay rate.
+* Hummer, D. G. 1994, *MNRAS* **268**, 109 — hydrogen recombination coefficients.
 * Kolb, E. W. & Turner, M. S. 1990, *The Early Universe* (Addison-Wesley).
 * Lewis, A., Challinor, A. & Lasenby, A. 2000, *ApJ* **538**, 473 — CAMB.
 * Mangano, G. et al. 2005, *Nucl. Phys. B* **729**, 221 — $N_{\rm eff} = 3.046$.
 * NIST Atomic Spectra Database (Kramida, A. et al.), https://physics.nist.gov/asd — ionisation energies.
+* NIST Atomic Weights and Isotopic Compositions, https://www.nist.gov/pml/atomic-weights-and-isotopic-compositions-relative-atomic-masses — masses of ¹H and ⁴He.
 * Osterbrock, D. E. & Ferland, G. J. 2006, *Astrophysics of Gaseous Nebulae and Active Galactic Nuclei*, 2nd ed.
 * Peebles, P. J. E. 1968, *ApJ* **153**, 1.
 * Péquignot, D., Petitjean, P. & Boisson, C. 1991, *A&A* **251**, 680 — case-B fit.
@@ -475,6 +488,5 @@ therefore isolate the recombination physics.
 * Seager, S., Sasselov, D. D. & Scott, D. 2000, *ApJS* **128**, 407.
 * Sobolev, V. V. 1960, *Moving Envelopes of Stars* (Harvard University Press).
 * Switzer, E. R. & Hirata, C. M. 2008, *Phys. Rev. D* **77**, 083006 — helium recombination.
-* Wang, M. et al. 2017, *Chinese Phys. C* **41**, 030003 — AME2016 atomic masses (**TODO: verify**).
 * Wong, W. Y., Moss, A. & Scott, D. 2008, *MNRAS* **386**, 1023 — RECFAST updates.
 * Zel'dovich, Ya. B., Kurt, V. G. & Sunyaev, R. A. 1968, *Zh. Eksp. Teor. Fiz.* **55**, 278.

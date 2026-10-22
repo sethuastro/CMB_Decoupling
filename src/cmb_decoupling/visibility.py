@@ -2,8 +2,7 @@
 
 References
 ----------
-Dodelson & Schmidt (2020), Modern Cosmology, 2nd ed., Ch. 4 (TODO: verify
-section numbers for the optical depth and visibility function).
+Dodelson & Schmidt (2020), Modern Cosmology, 2nd ed.
 Planck Collaboration (2020), A&A 641, A6 -- definition of z_* as tau(z_*) = 1.
 """
 

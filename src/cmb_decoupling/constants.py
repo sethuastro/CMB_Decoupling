@@ -37,12 +37,11 @@ E_LYA: float = 0.75 * E_ION_H
 E_ION_H_N2: float = 0.25 * E_ION_H
 #: Lyman-alpha wavelength, lambda = h c / E_Lya [m].
 LAMBDA_LYA: float = H_PLANCK * C_LIGHT / E_LYA
-#: Two-photon 2s -> 1s decay rate [s^-1]. Value used in RECFAST
-#: (Seager, Sasselov & Scott 1999, 2000), from Goldman (1989).
-#: TODO: verify the Goldman (1989) citation details.
+#: Two-photon 2s -> 1s decay rate [s^-1]: Goldman (1989, Phys. Rev. A 40, 1185),
+#: as quoted by Seager, Sasselov & Scott (1999).
 LAMBDA_2S1S: float = 8.22458
-#: Mass of the 1H atom, 1.00782503223 u (Wang et al. 2017, AME2016).
-#: TODO: verify AME citation.
+#: Mass of the 1H atom, 1.00782503223 u
+#: (NIST Atomic Weights and Isotopic Compositions database).
 M_H_ATOM: float = 1.00782503223 * AMU
 
 # --- Helium atomic data -----------------------------------------------------
@@ -50,5 +49,6 @@ M_H_ATOM: float = 1.00782503223 * AMU
 E_ION_HEI: float = 24.587387 * EV
 #: Ionisation energy of He II, 54.417760 eV (NIST Atomic Spectra Database).
 E_ION_HEII: float = 54.417760 * EV
-#: Mass of the 4He atom, 4.00260325413 u (Wang et al. 2017, AME2016).
+#: Mass of the 4He atom, 4.00260325413 u
+#: (NIST Atomic Weights and Isotopic Compositions database).
 M_HE4_ATOM: float = 4.00260325413 * AMU

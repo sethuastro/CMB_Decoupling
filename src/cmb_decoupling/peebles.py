@@ -1,7 +1,7 @@
 """Peebles three-level-atom model of hydrogen recombination.
 
 The free-electron fraction obeys (Peebles 1968; notation of Seager,
-Sasselov & Scott 1999 and Dodelson & Schmidt 2020, eq. 4.39)
+Sasselov & Scott 1999, eq. 1)
 
     dx_e/dz = C_r / [H(z)(1+z)] * [alpha_B n_H x_e^2
                                    - beta_B (1 - x_e) exp(-E_Lya / k T)],
@@ -37,9 +37,9 @@ from .constants import E_ION_H, K_B, LAMBDA_2S1S, LAMBDA_LYA
 from .cosmology import Cosmology
 from .saha import thermal_density, x_e_saha_full, x_e_saha_hydrogen
 
-# Case-B recombination coefficient fit (Pequignot et al. 1991, as used in
-# Seager et al. 1999):  alpha_B = 1e-19 a t^b / (1 + c t^d) m^3 s^-1,
-# with t = T / 1e4 K.  TODO: verify coefficients against Seager et al. (1999).
+# Case-B recombination coefficient fit (Pequignot et al. 1991), as given in
+# Seager et al. (1999), eq. 3:  alpha_B = 1e-19 a t^b / (1 + c t^d) m^3 s^-1,
+# with t = T / 1e4 K.
 ALPHA_B_NORM: float = 1.0e-19  # [m^3 s^-1]
 ALPHA_B_A: float = 4.309
 ALPHA_B_B: float = -0.6166

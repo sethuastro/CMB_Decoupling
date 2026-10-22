@@ -20,7 +20,7 @@ from .constants import C_LIGHT, G_NEWTON, M_H_ATOM, M_HE4_ATOM, MPC, SIGMA_SB
 
 #: Ratio of neutrino to photon temperature, (4/11)^(1/3), and the fermion
 #: factor 7/8, giving rho_nu / rho_gamma = N_eff * 7/8 * (4/11)^(4/3)
-#: (Dodelson & Schmidt 2020, Modern Cosmology, 2nd ed., Ch. 2).
+#: (Kolb & Turner 1990; Dodelson & Schmidt 2020, Modern Cosmology, 2nd ed.).
 NEUTRINO_DENSITY_FACTOR: float = 7.0 / 8.0 * (4.0 / 11.0) ** (4.0 / 3.0)
 
 
@@ -121,8 +121,8 @@ class Cosmology:
 
 
 #: Planck 2018 VI, Table 2, TT,TE,EE+lowE+lensing (mean values).
-#: Y_p is the BBN-consistent helium fraction quoted for this fit.
-#: TODO: verify the Y_p = 0.2454 value and its location in Planck 2018 VI.
+#: Y_p is the BBN prediction Planck uses for all Table 2 columns
+#: ("posterior mean Y_P ~ 0.2454", Table 2 caption; PArthENoPE, Sect. 2.1).
 #: N_eff = 3.046 (standard-model value used by Planck 2018; Mangano et al. 2005).
 PLANCK2018 = Cosmology(
     H0_km_s_Mpc=67.36,

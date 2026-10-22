@@ -2,10 +2,10 @@
 
 References
 ----------
-Dodelson & Schmidt (2020), Modern Cosmology, 2nd ed., Sec. 4.2 (hydrogen).
-Seager, Sasselov & Scott (2000), ApJS 128, 407 -- helium Saha relations,
-including the statistical-weight factors 4 (He I <-> He II) and 1
-(He II <-> He III). TODO: verify equation numbers.
+Dodelson & Schmidt (2020), Modern Cosmology, 2nd ed. (hydrogen).
+Seager, Sasselov & Scott (2000), ApJS 128, 407, eqs. 80-81 -- helium Saha
+relations, including the statistical-weight factors 4 (He I <-> He II) and 1
+(He II <-> He III).
 """
 
 from __future__ import annotations
