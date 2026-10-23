@@ -154,6 +154,6 @@ The full list is at the end of [`docs/theory.md`](docs/theory.md#9-references).
 
 I'm Sethulekshmi Beena, an MSc Astrophysics student at the University of Hertfordshire.
 ORCID [0009-0004-4767-2733](https://orcid.org/0009-0004-4767-2733) ·
-[homepage](https://sethulekshmibeena.github.io/my-webpage/)
+[homepage](https://sethuastro.github.io/)
 
 If this is useful to you, there's a [`CITATION.cff`](CITATION.cff) file. The code is MIT-licensed.
