@@ -8,7 +8,7 @@ comes from? This project is my attempt to answer that from first principles, by 
 free-electron fraction of the Universe, $`x_e(z)`$, through hydrogen recombination.
 
 I started with the Saha equation, which is the textbook answer, and quickly found that it puts last
-scattering at $`z \approx 1280`$, about 200 in redshift too early. The reason is that recombination is
+scattering at $`z \approx 1291`$, about 200 in redshift too early. The reason is that recombination is
 a bottleneck rather than an equilibrium process. An electron captured straight into the ground state
 emits a photon that ionises the next atom, and Lyman-α photons are trapped by resonant scattering.
 So I implemented the Peebles three-level atom, in which hydrogen reaches the ground state only through
@@ -55,7 +55,7 @@ $`z = 200`$. I think this comes from two simplifications rather than a bug. Firs
 recombines too slowly at late times, which is why RECFAST introduced a fudge factor; with their
 $F = 1.14$ my value drops to within 1% of CAMB. Second, I assume the gas stays at the radiation
 temperature, while in reality it cools faster below $`z \sim 300`$. Helium is the other visible gap.
-I treat it in Saha equilibrium, so at $`z \approx 2000\text{–}2800`$ my $`x_e`$ is up to 6% lower than CAMB's,
+I treat it in Saha equilibrium, so at $`z \approx 1800\text{–}2800`$ my $`x_e`$ is up to 6% lower than CAMB's,
 where helium recombination is delayed.
 
 A detail worth pointing out: the familiar "$`z \approx 1090`$" is not where $g(z)$ peaks when you
