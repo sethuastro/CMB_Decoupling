@@ -10,6 +10,7 @@ Outputs go to ``figures/`` (PDF + PNG) and ``results/`` (JSON + Markdown).
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -169,6 +170,10 @@ def write_results(models: dict[str, object]) -> None:
 
 def main() -> None:
     """Build all models, figures and tables."""
+    # The summary table contains non-ASCII characters (e.g. the minus sign);
+    # Windows consoles default to cp1252, which cannot print them.
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
     use_style()
     models = build_models()
     fig_ionisation(models)
