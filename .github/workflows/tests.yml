@@ -37,3 +37,20 @@ jobs:
           MPLBACKEND: Agg
       - name: Execute notebook top to bottom
         run: jupyter nbconvert --to notebook --execute --output /tmp/executed.ipynb notebooks/recombination_and_decoupling.ipynb
+
+  windows:
+    # Fresh-install check on Windows: console encoding and path handling differ from Linux.
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install package with test dependencies
+        run: pip install -e ".[dev]"
+      - name: Run tests
+        run: pytest -v
+      - name: Regenerate figures
+        run: python scripts/make_figures.py
+        env:
+          MPLBACKEND: Agg

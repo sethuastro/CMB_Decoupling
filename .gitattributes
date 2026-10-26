@@ -1,2 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Count the notebook as documentation so the language bar reflects the Python package
+*.ipynb linguist-documentation

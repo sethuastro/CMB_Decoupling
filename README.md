@@ -1,6 +1,6 @@
 # CMB Decoupling
 
-[![tests](https://github.com/sethuastro/CMB_Decoupling_Project_/actions/workflows/tests.yml/badge.svg)](https://github.com/sethuastro/CMB_Decoupling_Project_/actions/workflows/tests.yml)
+[![tests](https://github.com/sethuastro/CMB_Decoupling/actions/workflows/tests.yml/badge.svg)](https://github.com/sethuastro/CMB_Decoupling/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 When is the cosmic microwave background actually emitted, and how thick is the "surface" it
@@ -93,8 +93,8 @@ where it's made.
 You'll need Python 3.10 or newer.
 
 ```bash
-git clone https://github.com/sethuastro/CMB_Decoupling_Project_.git
-cd CMB_Decoupling_Project_
+git clone https://github.com/sethuastro/CMB_Decoupling.git
+cd CMB_Decoupling
 python -m venv .venv
 source .venv/bin/activate          # on Windows: .venv\Scripts\activate
 pip install -e ".[dev]"
