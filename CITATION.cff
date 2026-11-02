@@ -10,8 +10,8 @@ authors:
     website: "https://sethuastro.github.io/"
 repository-code: "https://github.com/sethuastro/CMB_Decoupling"
 license: MIT
-version: 0.1.0
-date-released: 2026-10-22
+version: 1.0.0
+date-released: 2026-11-02
 keywords:
   - cosmology
   - cosmic microwave background

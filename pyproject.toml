@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "cmb-decoupling"
-version = "0.1.0"
+version = "1.0.0"
 description = "Hydrogen recombination (Saha, Peebles) and CMB photon decoupling, validated against CAMB/RECFAST"
 readme = "README.md"
 requires-python = ">=3.10"
