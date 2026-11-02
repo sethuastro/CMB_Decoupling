@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import pytest
 
-from cmb_decoupling.results import key_results
+from cmb_decoupling.results import key_results, residual_summary
 
 
 @pytest.fixture(scope="module")
@@ -32,6 +32,24 @@ def test_last_scattering_against_camb(ours, ref):
 def test_freeze_out_against_camb(ours, ref):
     # Pure Peebles overestimates the residual ionisation (~14% at z=200).
     assert ours.x_e_freeze_out == pytest.approx(ref.x_e_freeze_out, rel=0.25)
+
+
+@pytest.fixture(scope="module")
+def residuals(cosmo, peebles, camb_ref):
+    return residual_summary(peebles.x_e, camb_ref.x_e, cosmo)
+
+
+def test_xe_residual_in_last_scattering_window(residuals):
+    # Measured: 1.08% (z = 966.5-1170.5, the FWHM of CAMB's g(z)); see scripts/validate.py.
+    assert residuals.max_abs_window < 0.02
+
+
+def test_xe_residual_full_range(residuals):
+    # Measured on z = 200-2000: -3.58% (helium in Saha, z = 2000) and +14.05%
+    # (three-level atom at late times, z = 200). Bounds describe this, not a target.
+    assert -0.05 < residuals.min_residual < 0.0
+    assert 0.0 < residuals.max_residual < 0.20
+    assert residuals.z_max_residual == pytest.approx(200.0)
 
 
 def test_self_regression(ours):

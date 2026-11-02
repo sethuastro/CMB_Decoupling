@@ -29,6 +29,13 @@ def test_visibility_normalisation(cosmo, peebles):
     assert trapezoid(ls.g, ls.z) == pytest.approx(1 - np.exp(-ls.tau[-1]), rel=1e-6)
 
 
+def test_visibility_integrates_to_one(cosmo, peebles):
+    # tau(z_max = 3000) >> 1, so e^{-tau} is negligible and g(z) is a normalised density.
+    ls = last_scattering(peebles.x_e, cosmo)
+    assert ls.tau[-1] > 100.0
+    assert trapezoid(ls.g, ls.z) == pytest.approx(1.0, abs=1e-6)
+
+
 def test_grid_convergence(cosmo, peebles):
     coarse = last_scattering(peebles.x_e, cosmo, n=15001)
     fine = last_scattering(peebles.x_e, cosmo, n=60001)
