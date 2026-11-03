@@ -2,6 +2,7 @@
 
 [![tests](https://github.com/sethuastro/CMB_Decoupling/actions/workflows/tests.yml/badge.svg)](https://github.com/sethuastro/CMB_Decoupling/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23932529.svg)](https://doi.org/10.5281/zenodo.23932529)
 
 When is the cosmic microwave background actually emitted, and how thick is the "surface" it comes
 from? I built this code to learn recombination physics from first principles by following the
