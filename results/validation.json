@@ -1,0 +1,97 @@
+{
+  "camb_version": "2.0.5",
+  "camb_recombination": "Recfast",
+  "last_scattering": {
+    "camb": {
+      "z_star": 1089.8900710994267,
+      "z_peak": 1078.3679452200388,
+      "fwhm": 204.00059486771897
+    },
+    "peebles": {
+      "z_star": 1089.4370745392039,
+      "z_peak": 1078.7955467016986,
+      "fwhm": 203.33067774818244
+    },
+    "peebles_fudge": {
+      "z_star": 1090.2769961061613,
+      "z_peak": 1079.0473446893725,
+      "fwhm": 202.72657409606586
+    }
+  },
+  "camb_recfast_settings": {
+    "fudge": 1.125,
+    "Hswitch": true,
+    "gauss_centres_z": [
+      1451.884439702605,
+      867.4446628700608
+    ]
+  },
+  "residuals_vs_camb": {
+    "peebles": {
+      "window_lo": 966.507145886229,
+      "window_hi": 1170.507740753948,
+      "max_abs_window": 0.010813545422290627,
+      "z_max_abs_window": 1170.5,
+      "min_residual": -0.03579640434004827,
+      "z_min_residual": 2000.0,
+      "max_residual": 0.1404936065241551,
+      "z_max_residual": 200.0,
+      "z_min": 200.0,
+      "z_max": 2000.0,
+      "residual_at_freeze_out": 0.1404936065607214
+    },
+    "peebles_fudge": {
+      "window_lo": 966.507145886229,
+      "window_hi": 1170.507740753948,
+      "max_abs_window": 0.010390256944198484,
+      "z_max_abs_window": 1170.5,
+      "min_residual": -0.03579640434004827,
+      "z_min_residual": 2000.0,
+      "max_residual": 0.014606252660196661,
+      "z_max_residual": 1264.0,
+      "z_min": 200.0,
+      "z_max": 2000.0,
+      "residual_at_freeze_out": 0.008650244424860842
+    }
+  },
+  "residuals_hydrogen_era": {
+    "peebles": {
+      "window_lo": 966.507145886229,
+      "window_hi": 1170.507740753948,
+      "max_abs_window": 0.01081268868056795,
+      "z_max_abs_window": 1170.488888888889,
+      "min_residual": -0.003268465909092355,
+      "z_min_residual": 1800.0,
+      "max_residual": 0.14049360653415421,
+      "z_max_residual": 200.0,
+      "z_min": 200.0,
+      "z_max": 1800.0
+    },
+    "peebles_fudge": {
+      "window_lo": 966.507145886229,
+      "window_hi": 1170.507740753948,
+      "max_abs_window": 0.010389339233394024,
+      "z_max_abs_window": 1170.488888888889,
+      "min_residual": -0.014599229913939693,
+      "z_min_residual": 861.5111111111112,
+      "max_residual": 0.014606253069484154,
+      "z_max_residual": 1264.0,
+      "z_min": 200.0,
+      "z_max": 1800.0
+    }
+  },
+  "residuals_helium_era": {
+    "z_min": 1800.0,
+    "z_max": 3000.0,
+    "min_residual": -0.05810588572572306,
+    "z_min_residual": 2299.4
+  },
+  "tau_integrator_check": {
+    "z_star_from_camb_xe": 1089.8900710994267,
+    "z_star_camb_internal": 1089.8922558485872
+  },
+  "saha": {
+    "z_star": 1291.1323350280427,
+    "z_peak": 1283.606148602622
+  }
+}

@@ -18,7 +18,10 @@ Known issues, fixed in the package:
 - cosmological parameters and constants were duplicated across files without
   sources.
 
-Using the Saha x_e, the visibility function peaks at z ≈ 1277, much earlier
+Using the Saha x_e, the visibility function peaks at z = 1283.6 (`python scripts/validate.py`), much earlier
 than the z ≈ 1080 obtained once the Peebles model is used. This is the
 physical failure of Saha equilibrium at late times, not a coding error; see
 `docs/theory.md`.
+
+An earlier version of this note gave z ≈ 1277; that figure came from the archive scripts above
+(before the fixes listed), not from the package.

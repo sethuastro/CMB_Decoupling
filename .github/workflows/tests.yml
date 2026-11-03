@@ -35,6 +35,13 @@ jobs:
         run: python scripts/make_figures.py
         env:
           MPLBACKEND: Agg
+      - name: Run validation against CAMB
+        run: python scripts/validate.py
+        env:
+          MPLBACKEND: Agg
+      - name: Check committed results tables match the code
+        if: matrix.python-version == '3.13'
+        run: git diff --exit-code -- results/key_results.md results/validation.md
       - name: Execute notebook top to bottom
         run: jupyter nbconvert --to notebook --execute --output /tmp/executed.ipynb notebooks/recombination_and_decoupling.ipynb
 
@@ -52,5 +59,9 @@ jobs:
         run: pytest -v
       - name: Regenerate figures
         run: python scripts/make_figures.py
+        env:
+          MPLBACKEND: Agg
+      - name: Run validation against CAMB
+        run: python scripts/validate.py
         env:
           MPLBACKEND: Agg
